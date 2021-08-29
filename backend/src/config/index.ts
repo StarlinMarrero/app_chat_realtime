@@ -14,7 +14,7 @@ export default {
             password: process.env.DB_FRONT_PASSWORD,
             database: process.env.DB_FRONT_DATABASE,
             entities: [path.join(__dirname, "../entities/**")],
-            synchronize: false,
+            synchronize: true,
         }
     },
     cookie: {

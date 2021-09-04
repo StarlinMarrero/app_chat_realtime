@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
-</head>
-<body>
-    <h2>Hola</h2>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-2">
+          <h3>Online</h3>
 
+          <div class="card mb-3" style="max-width: 540px; height: 62px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://avatars.githubusercontent.com/u/42224994?s=60&v=4"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p>Starlin Marrero</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-10">
+          <h3>Chats</h3>
 
+          <div class="card">
+         <form id="form_chat">
+
+          
+            <div class="card-body" style="height: 85vh;">
+              <ul class="list-group" id="lista">
+                <li class="list-group-item">
+                  An item
+                  <img
+                    src="https://avatars.githubusercontent.com/u/42224994?s=60&v=4"
+                    style="border-radius: 2.25rem !important; width: 40px"
+                    class="rounded float-end"
+                    alt="..."
+                  />
+                </li>
+             
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-10">
+                  <textarea
+                    name="descripcion"
+                    style="height: 0px"
+                    id="descripciontextarea"
+                    class="form-control"
+                  ></textarea>
+                </div>
+                <div class="col-2">
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-success">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.min.js"></script>
-    
-    <script>
-      
-    </script>
-</body>
+
+    <script src="./main.js"></script>
+  </body>
 </html>

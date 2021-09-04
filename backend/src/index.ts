@@ -17,7 +17,14 @@ io.on("connection", (socket: any) => {
 
     console.log("new connection", socket.conn.id)
 
+    socket.on("client:message", (text:any) => {
+
+        socket.emit("server:message", text)
+    })
+
+    
 })
+
 
 app.use(express.static(__dirname + "/public"))
 

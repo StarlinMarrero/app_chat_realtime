@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import io from 'socket.io-client'
 
 function App() {
+
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    const newSocket = io(`http://${window.location.hostname}:4000`);
+    
+  });
+
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +30,9 @@ function App() {
           Learn React
         </a>
       </header>
+
     </div>
+    
   );
 }
 

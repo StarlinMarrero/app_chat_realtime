@@ -8,7 +8,8 @@ const app = express();
 const httpServer = require("http").createServer(app)
 const io = require("socket.io")(httpServer, {
     cors:{
-        origin: "*"
+        origin: '*',
+        methods: ['GET', 'POST']
     }
 });
 
@@ -18,9 +19,8 @@ io.on("connection", (socket: any) => {
 
 })
 
-app.get("/", (req:Request, res: Response) => {
-    res.send("Hola")
-})
+app.use(express.static(__dirname + "/public"))
+
 
 //configs
 
